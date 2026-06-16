@@ -1,0 +1,28 @@
+cat > .gitignore << 'EOF'
+# IDE / Agent
+.agents/
+.codex/
+**/.idea/
+**/.vscode/
+!**/.vscode/settings.json
+
+# Python
+**/__pycache__/
+**/*.pyc
+**/*.egg-info/
+**/.pytest_cache/
+
+# 训练输出
+**/runs/
+**/logs/
+**/wandb/
+**/outputs/
+**/videos/
+
+# 大文件（按需删除下面几行，若你想上传 data/）
+*.pkl
+*.zarr
+**/assets/
+EOF
+
+!data/gmr_csv/*.csv
